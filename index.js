@@ -77,25 +77,53 @@ for (let a = 0; a <= 15; a++) {
 //ESERCIZI EXTRA NON OBBLIGATORI
 
 /* ESERCIZIO EXTRA 1
-  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
+  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro 
+  addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let num3 = 4
+let num4 = 4
+
+if (num3 === 8 || num4 === 8) {
+  console.log("Valore uguale a 8")
+}
+else if (num3 + num4 === 8 || num3 - num4 === 8) {
+  console.log("Somma o sottrazione uguale a 8")
+}
 
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
-C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
+C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione 
+  ha un costo fisso pari a 10).
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart = 32
+let speseDiSpedizione = 10
+
+if (totalShoppingCart >= 50) {
+  console.log("Totale = " + totalShoppingCart)
+}
+else if (totalShoppingCart < 50) {
+  console.log("Totale = " + (totalShoppingCart + speseDiSpedizione))
+}
 
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
-  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
+  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, 
+  se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart2 = 32 
+let speseDiSpedizione2 = 10
+let totalShoppingCart3 = totalShoppingCart2 - [(totalShoppingCart2 / 100) * 20]
+
+if (totalShoppingCart3 >= 50) {
+  console.log("Totale = " + totalShoppingCart3)
+}
+else if (totalShoppingCart3 < 50) {
+  console.log("Totale = " + (totalShoppingCart3 + speseDiSpedizione2))
+}
 
 /*  ESERCIZIO EXTRA 4
   Usa un operatore ternaio per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
@@ -103,8 +131,27 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let isMale = false
+let gender = isMale ? "Male" : "Female"
+console.log(gender)
 
 /* ESERCIZIO EXTRA 5
-  Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
+  Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), 
+  stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
+
+for (let b = 0; b <= 100; b++) {
+let risultato = b
+let divisoTre = b % 3 === 0
+let divisoCinque = b % 5 === 0
+ if (divisoTre && divisoCinque) {
+  risultato = "FizzBuzz"  
+ }
+  else if (divisoTre) {
+      risultato = "Fizz"
+  }
+  else if (divisoCinque) {
+      risultato = "Buzz"
+  }
+  console.log(risultato)
+}
